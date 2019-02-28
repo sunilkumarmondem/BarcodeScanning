@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cognex.com.cmbcamerademo.ScannerActivity">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:fillViewport="true">
+
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:background="#333333"
+
+            tools:context="${relativePackage}.${activityClass}" >
+
+
+
+            <Button
+
+                android:id="@+id/btnScan"
+
+                android:layout_width="fill_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginBottom="20dp"
+
+                android:layout_marginTop="20dp"
+
+                android:layout_marginRight="20dp"
+
+                android:layout_marginLeft="20dp"
+
+                android:layout_alignParentBottom="true"
+
+                android:background="@drawable/scan_button"
+
+                android:padding="8dp"
+
+                android:gravity="center"
+
+                android:textSize="16sp"
+
+                android:text="START SCANNING"
+
+                android:textColor="@android:color/black" />
+
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+
+                android:layout_above="@id/btnScan"
+
+                android:orientation="horizontal">
+
+
+
+                <RelativeLayout
+
+                    android:id="@+id/rlPreviewContainer"
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1.78" >
+
+
+
+                    <ImageView
+
+                        android:id="@+id/ivPreview"
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+
+                        android:layout_marginTop="6dp"
+
+                        android:scaleType="fitCenter" />
+
+
+
+                    <TextView
+
+                        android:id="@+id/tvStatus"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentTop="true"
+
+                        android:layout_alignParentRight="true"
+
+                        android:layout_margin="6dp"
+
+                        android:text="Disconnected"
+
+                        android:textColor="@android:color/white"
+
+                        android:textSize="12sp"
+
+                        android:textAlignment="center"
+
+                        android:paddingLeft="4dp"
+
+                        android:paddingRight="4dp"
+
+                        android:background="@drawable/connection_status_bg_disconnected"/>
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+
+                        android:id="@+id/tvSymbol"
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="40dp"
+
+                        android:layout_below="@id/rlPreviewContainer"
+
+                        android:gravity="center"
+
+                        android:textSize="18sp"
+
+                        android:textColor="@android:color/white"
+
+                        android:layout_margin="8dp" />
+
+
+
+                    <TextView
+
+                        android:id="@+id/tvCode"
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+
+                        android:layout_below="@id/tvSymbol"
+
+                        android:layout_above="@id/btnScan"
+
+                        android:maxLines = "100"
+
+                        android:scrollbars = "vertical"
+
+                        android:gravity="center"
+
+                        android:layout_margin="8dp"
+
+                        android:textSize="18sp"
+
+                        android:textColor="@android:color/white"
+
+                        android:layout_weight="1" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <FrameLayout
+
+                android:id="@+id/symbologies_container"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

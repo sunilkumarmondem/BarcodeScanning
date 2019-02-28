@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cognex.com.cmbcamerademo.ScannerActivity">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:background="#333333"
+
+            tools:context="${relativePackage}.${activityClass}">
+
+
+            <RelativeLayout
+
+                android:id="@+id/rlPreviewContainer"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="190dp"
+
+                android:layout_weight="1">
+
+
+                <ImageView
+
+                    android:id="@+id/ivPreview"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+
+                    android:layout_marginTop="6dp"
+
+                    android:scaleType="fitCenter" />
+
+
+                <TextView
+
+                    android:id="@+id/tvStatus"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentTop="true"
+
+                    android:layout_alignParentRight="true"
+
+                    android:layout_margin="6dp"
+
+                    android:background="@drawable/connection_status_bg_disconnected"
+
+                    android:paddingLeft="4dp"
+
+                    android:paddingRight="4dp"
+
+                    android:text="Disconnected"
+
+                    android:textAlignment="center"
+
+                    android:textColor="@android:color/white"
+
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+
+                android:id="@+id/tvSymbol"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+
+                android:layout_below="@id/rlPreviewContainer"
+
+                android:layout_margin="8dp"
+
+                android:gravity="center"
+
+                android:textColor="@android:color/white"
+
+                android:textSize="18sp" />
+
+
+            <Button
+
+                android:id="@+id/btnScan"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true"
+
+                android:layout_marginLeft="20dp"
+
+                android:layout_marginRight="20dp"
+
+                android:layout_marginBottom="45dp"
+
+                android:background="@drawable/scan_button"
+
+                android:gravity="center"
+
+                android:padding="10dp"
+
+                android:text="START SCANNING"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+
+                android:id="@+id/tvCode"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+
+                android:layout_above="@id/btnScan"
+
+                android:layout_below="@id/tvSymbol"
+
+                android:layout_margin="8dp"
+
+                android:layout_weight="1"
+
+                android:gravity="center"
+
+                android:maxLines="100"
+
+                android:scrollbars="vertical"
+
+                android:textColor="@android:color/white"
+
+                android:textSize="18sp" />
+
+
+            <FrameLayout
+
+                android:id="@+id/symbologies_container"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/buttonadd"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="192dp"
+                android:layout_marginBottom="41dp"
+                android:background="@drawable/scan_button"
+                android:text="Add Product" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
